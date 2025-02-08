@@ -20,20 +20,6 @@ const (
 	FIELD_CVV          = "cvv"
 )
 
-// func (en *Encryptor) to(e string) string {
-// 	key := base64.RawStdEncoding.EncodeToString([]byte(e))
-
-// 	re1 := regexp.MustCompile(`=`)
-// 	re2 := regexp.MustCompile(`\+`)
-// 	re3 := regexp.MustCompile(`\/`)
-
-// 	key = re1.ReplaceAllString(key, "")
-// 	key = re2.ReplaceAllString(key, "-")
-// 	key = re3.ReplaceAllString(key, "_")
-
-// 	return key
-// }
-
 func (en *Encryptor) ro(e string) string {
 	if len(e)%2 == 1 {
 		e = "0" + e
